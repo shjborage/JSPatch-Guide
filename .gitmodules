@@ -1,0 +1,3 @@
+[submodule "JSPatchDetail/JSPatch"]
+	path = JSPatchDetail/JSPatch
+	url = https://github.com/bang590/JSPatch.git

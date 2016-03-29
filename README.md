@@ -18,3 +18,4 @@
 
 ### 具体调研细节
 -   [**JavaScriptCore** 调研](/JavaScriptCore/JSCGuide.md)
+-   [**JSPatch** Detail 调研](/JSPatchDetail/JSPatchDetail.md)
