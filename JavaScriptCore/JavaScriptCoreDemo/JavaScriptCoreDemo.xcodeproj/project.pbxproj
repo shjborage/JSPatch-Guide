@@ -14,6 +14,7 @@
 		4792568B1CAA7F9B00EFE5B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4792568A1CAA7F9B00EFE5B4 /* Assets.xcassets */; };
 		4792568E1CAA7F9B00EFE5B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4792568C1CAA7F9B00EFE5B4 /* LaunchScreen.storyboard */; };
 		479256991CAA7F9B00EFE5B4 /* JavaScriptCoreDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 479256981CAA7F9B00EFE5B4 /* JavaScriptCoreDemoTests.m */; };
+		479256A41CAA80F400EFE5B4 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479256A31CAA80F400EFE5B4 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		479256941CAA7F9B00EFE5B4 /* JavaScriptCoreDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JavaScriptCoreDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		479256981CAA7F9B00EFE5B4 /* JavaScriptCoreDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JavaScriptCoreDemoTests.m; sourceTree = "<group>"; };
 		4792569A1CAA7F9B00EFE5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479256A31CAA80F400EFE5B4 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479256A41CAA80F400EFE5B4 /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		479256721CAA7F9B00EFE5B4 = {
 			isa = PBXGroup;
 			children = (
+				479256A31CAA80F400EFE5B4 /* JavaScriptCore.framework */,
 				4792567D1CAA7F9B00EFE5B4 /* JavaScriptCoreDemo */,
 				479256971CAA7F9B00EFE5B4 /* JavaScriptCoreDemoTests */,
 				4792567C1CAA7F9B00EFE5B4 /* Products */,
@@ -344,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JavaScriptCoreDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SQ.JavaScriptCoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JavaScriptCoreDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SQ.JavaScriptCoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
