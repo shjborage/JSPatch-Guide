@@ -17,4 +17,4 @@
 3. 降级方案及详细策略  
 
 ### 具体调研细节
--   [**JavaScriptCode** 调研](/JavaScriptCore/JSCGuide.md)
+-   [**JavaScriptCore** 调研](/JavaScriptCore/JSCGuide.md)
