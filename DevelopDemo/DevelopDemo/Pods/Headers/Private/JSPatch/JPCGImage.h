@@ -1,0 +1,1 @@
+../../../../../../JSPatchDetail/JSPatch/Extensions/CoreGraphics/JPCGImage.h

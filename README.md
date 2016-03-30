@@ -15,7 +15,10 @@
 1. 基础原理（js与oc通信原理以及patch原理等）  
 2. 接口扩展以及使用三方库，比如网络库  
 3. 降级方案及详细策略  
+4. 开发可能会遇到的问题  
+
 
 ### 具体调研细节
 -   [**JavaScriptCore** 调研](/JavaScriptCore/JSCGuide.md)
 -   [**JSPatch** Detail 调研](/JSPatchDetail/JSPatchDetail.md)
+-   [**开发可能会遇到的问题**](/DevelopDemo/DevelopDemo.md)

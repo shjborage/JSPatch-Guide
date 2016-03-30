@@ -1,0 +1,17 @@
+PODS:
+  - JSPatch/Core (0.2)
+  - JSPatch/Extensions (0.2):
+    - JSPatch/Core
+
+DEPENDENCIES:
+  - JSPatch/Core (from `../../JSPatchDetail/JSPatch`)
+  - JSPatch/Extensions (from `../../JSPatchDetail/JSPatch`)
+
+EXTERNAL SOURCES:
+  JSPatch:
+    :path: "../../JSPatchDetail/JSPatch"
+
+SPEC CHECKSUMS:
+  JSPatch: 23dcceeec8f8357644f8ef70eb002ef2dbd830de
+
+COCOAPODS: 0.38.2
