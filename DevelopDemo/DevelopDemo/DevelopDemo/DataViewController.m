@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.view addSubview:[self genView]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,5 +30,11 @@
     [super viewWillAppear:animated];
     self.dataLabel.text = [self.dataObject description];
 }
+
+- (UIView *)genView
+{
+    return [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
+}
+
 
 @end

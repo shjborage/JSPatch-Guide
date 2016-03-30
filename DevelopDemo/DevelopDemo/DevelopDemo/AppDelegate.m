@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JPEngine.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [JPEngine startEngine];
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+    [JPEngine evaluateScript:script];
+    
+    // exec js directly
+//    [JPEngine evaluateScript:@"\
+     var alertView = require('UIAlertView').alloc().init();\
+     alertView.setTitle('Alert');\
+     alertView.setMessage('AlertView from js'); \
+     alertView.addButtonWithTitle('OK');\
+     alertView.show(); \
+     console.log(alertView); \
+     "];
+
+    
     return YES;
 }
 
