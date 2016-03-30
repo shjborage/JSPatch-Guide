@@ -34,3 +34,4 @@
 ## REF
 -   [Git 通过submodule添加子项目/库](http://my.oschina.net/iatbforever/blog/228914)
 -   [Git Submodule的坑](http://www.cocoachina.com/industry/20130509/6161.html)
+-   [JSPatch Loader 使用文档](https://github.com/bang590/JSPatch/wiki/JSPatch-Loader-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3)
