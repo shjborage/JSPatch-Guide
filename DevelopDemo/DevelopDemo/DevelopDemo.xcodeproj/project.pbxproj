@@ -19,6 +19,7 @@
 		479256DE1CAB7AF000EFE5B4 /* DevelopDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 479256DD1CAB7AF000EFE5B4 /* DevelopDemoUITests.m */; };
 		479256EC1CAB806500EFE5B4 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479256EB1CAB806500EFE5B4 /* JavaScriptCore.framework */; };
 		47FB4BDD1CABBC4400EAEB1E /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = 47FB4BDC1CABBC4400EAEB1E /* demo.js */; };
+		47FB4BDF1CABE5D200EAEB1E /* TestImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 47FB4BDE1CABE5D200EAEB1E /* TestImage.png */; };
 		CA01BDB0409D021724AA9287 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9085970D4BE39A74C936CDB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		479256DF1CAB7AF000EFE5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		479256EB1CAB806500EFE5B4 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		47FB4BDC1CABBC4400EAEB1E /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = demo.js; path = DevelopDemo/demo.js; sourceTree = "<group>"; };
+		47FB4BDE1CABE5D200EAEB1E /* TestImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImage.png; path = Assets.xcassets/TestImage.imageset/TestImage.png; sourceTree = "<group>"; };
 		896C8E1AD7F28D6DA8850F7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F18F01224C4933403E770E59 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F9085970D4BE39A74C936CDB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				479256C41CAB7AF000EFE5B4 /* Assets.xcassets */,
 				479256C61CAB7AF000EFE5B4 /* LaunchScreen.storyboard */,
 				479256C91CAB7AF000EFE5B4 /* Info.plist */,
+				47FB4BDE1CABE5D200EAEB1E /* TestImage.png */,
 				479256B21CAB7AF000EFE5B4 /* Supporting Files */,
 			);
 			path = DevelopDemo;
@@ -286,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FB4BDF1CABE5D200EAEB1E /* TestImage.png in Resources */,
 				479256C81CAB7AF000EFE5B4 /* LaunchScreen.storyboard in Resources */,
 				479256C51CAB7AF000EFE5B4 /* Assets.xcassets in Resources */,
 				479256C31CAB7AF000EFE5B4 /* Main.storyboard in Resources */,
