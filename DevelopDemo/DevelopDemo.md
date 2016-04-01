@@ -29,5 +29,9 @@
 *调试注意打开这个，不然有些js文件可能无法被正常加载。*  
 ![](http://blog.saick.net/HostedResources/Images/2016/JS-Debug.png)
 
+### 代码冲突问题
+如果你有代码冲突的问题，当然这个我觉得比较扯，可以通过类似混淆的方式来修改 `symbol` 的方式来解决，参考这个 <http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/>
+还有一个方案就是将只使用 `Core` 部分（修改下类名等），其它部分由自己来实现。
+
 ## REF
 [JSPatch 常见问题](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
