@@ -17,6 +17,9 @@
 3. 降级方案及详细策略  
 4. 开发可能会遇到的问题  
 
+### 常用工具
+<http://bang590.github.io/JSPatchConvertor/>
+
 
 ### 具体调研细节
 -   [**JavaScriptCore** 调研](/JavaScriptCore/JSCGuide.md)
