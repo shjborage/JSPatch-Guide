@@ -4,6 +4,7 @@
 -   开发复杂度
 -   是否可调试以及调试难度
 -   资源文件的使用
+-   多js文件支持
 
 ### 代码量
 -   比native原生与我的话，要适应一下基础的环境。 目前支持的语法还是比较多的，有一些方式进行扩展。  
@@ -17,6 +18,7 @@
 -   字符串 / 数组 / 字典 操作的话，因为 `oc` 与 `js` 中都有相应的类型，使用上需要特别注意
 -   各种api都需要背下来进行开发，时间成本会变高
 -   对 `property` 的使用需要注意，不能使用 *dot语法*，需要使用 *get set方法* 来做
+-   对 `NSString` 类型的使用，也会有一些坑 详情如下：`var dataDesc = require('NSString').string().stringByAppendingString(self.dataObject().description()).stringByAppendingString(' Test');` 这样的写法是ok的，但如果这样写 `self.dataLabel().setText(self.dataObject().description() + "Test");` 就不行了。 所以你懂的，得分清你在写什么代码。
 
 ### 调试
 -   `js` 中的 `console.log();` 会被打印在 `Xcode` 控制台（做了中转，相当于`NSLog`）  
@@ -33,5 +35,18 @@
 如果你有代码冲突的问题，当然这个我觉得比较扯，可以通过类似混淆的方式来修改 `symbol` 的方式来解决，参考这个 <http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/>
 还有一个方案就是将只使用 `Core` 部分（修改下类名等），其它部分由自己来实现。
 
+### 使用注意事项
+#### 更新频率
+>我之前看到很多人把使用js和下载js的代码都放在了didFinishLaunchingWithOptions：这个方法。我觉得有所不妥，因为如果这个app用户一直放在手机的后台（比如微信），并且也没出现内存警告的话，这个方法应该一直不会调用。我建议的是：使用js文件的代码放在didFinishLaunchingWithOptions： 而下载js文件的代码放在applicationDidBecomeActive: 因为这个方法在程序启动和后台回到前台时都会调用。并且我建议设置一个间隔时间，根据一些数据和权衡之后我们采用的是间隔时间设为1小时。 也就是说每次来到这个方法时，先要检测是距离上次发请求的时间间隔是否超过1小时，超过则发请求，否则跳过。  
+
+#### 参考流程
+![](http://blog.saick.net/HostedResources/Images/2016/jspatch_1.png)
+![](http://blog.saick.net/HostedResources/Images/2016/jspatch_2.png)
+
+#### 常用工具
+[JSPatchConvertor](https://github.com/bang590/JSPatchConvertor)
+
 ## REF
 [JSPatch 常见问题](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+[JSPatch 使用小记](http://www.cnblogs.com/dsxniubility/p/5080875.html)
+[JSPatch 实现原理详解](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3)

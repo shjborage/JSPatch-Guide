@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474344DF1CB55DC700C59EC7 /* SQNewClassTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 474344DE1CB55DC700C59EC7 /* SQNewClassTest.js */; };
 		479256B41CAB7AF000EFE5B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 479256B31CAB7AF000EFE5B4 /* main.m */; };
 		479256B71CAB7AF000EFE5B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 479256B61CAB7AF000EFE5B4 /* AppDelegate.m */; };
 		479256BA1CAB7AF000EFE5B4 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479256B91CAB7AF000EFE5B4 /* RootViewController.m */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		474344DE1CB55DC700C59EC7 /* SQNewClassTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = SQNewClassTest.js; path = DevelopDemo/SQNewClassTest.js; sourceTree = "<group>"; };
 		479256AF1CAB7AF000EFE5B4 /* DevelopDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevelopDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479256B31CAB7AF000EFE5B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		479256B51CAB7AF000EFE5B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		479256A61CAB7AEF00EFE5B4 = {
 			isa = PBXGroup;
 			children = (
+				474344DE1CB55DC700C59EC7 /* SQNewClassTest.js */,
 				47FB4BDC1CABBC4400EAEB1E /* demo.js */,
 				479256EB1CAB806500EFE5B4 /* JavaScriptCore.framework */,
 				479256B11CAB7AF000EFE5B4 /* DevelopDemo */,
@@ -293,6 +296,7 @@
 				479256C81CAB7AF000EFE5B4 /* LaunchScreen.storyboard in Resources */,
 				479256C51CAB7AF000EFE5B4 /* Assets.xcassets in Resources */,
 				479256C31CAB7AF000EFE5B4 /* Main.storyboard in Resources */,
+				474344DF1CB55DC700C59EC7 /* SQNewClassTest.js in Resources */,
 				47FB4BDD1CABBC4400EAEB1E /* demo.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

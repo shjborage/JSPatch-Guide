@@ -1,9 +1,13 @@
-require('UIView, UIColor, UILabel')
-require('UIScreen')
+require('UIView, UIColor, UILabel');
+require('UIScreen');
+
+include('SQNewClassTest.js');
+
 defineClass('DataViewController', {
   // replace the -genView method
   genView: function () {
     var view = self.ORIGgenView();
+    view.setFrame({x:0, y:100, width:UIScreen.mainScreen().bounds().width, height:300});
     view.setBackgroundColor(UIColor.greenColor())
     var label = UILabel.alloc().initWithFrame(view.frame());
     label.setText("JSPatch");
@@ -11,7 +15,7 @@ defineClass('DataViewController', {
     view.addSubview(label);
 
     var imageView = require('UIImageView').alloc().init();
-    imageView.setFrame({x:0, y:0, width:UIScreen.mainScreen().bounds().width, height:150});
+    imageView.setFrame({x:0, y:50, width:UIScreen.mainScreen().bounds().width, height:150});
     imageView.setBackgroundColor(UIColor.grayColor());
     view.addSubview(imageView);
 
