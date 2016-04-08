@@ -25,3 +25,8 @@
 -   [**JavaScriptCore** 调研](/JavaScriptCore/JSCGuide.md)
 -   [**JSPatch** Detail 调研](/JSPatchDetail/JSPatchDetail.md)
 -   [**开发可能会遇到的问题**](/DevelopDemo/DevelopDemo.md)
+
+### 常见问题与解答 Q&A
+##### 1. 重写的方法与原来的类型不对报错怎么办？
+建议仔细看下作者写的替换的[原理](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3)，本身是没有问题的。  
+目前不需要怀疑JSPatch的原理以及本身的问题，先检查一下重写原有方法的参数类型与你要重写的是否一致，一定要仔细检查，不要想当然。
