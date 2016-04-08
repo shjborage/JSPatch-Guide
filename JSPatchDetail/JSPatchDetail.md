@@ -1,5 +1,6 @@
 ## 准备工作
-先通过 `git submodule` 把代码拉下来。。。
+先通过 `git submodule` 把代码拉下来。。。  
+非常重要的是作者写的文档 [JSPatch 实现原理详解](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3)
 
 ### 一些基本原理
 ####  `console.log` 中转的实现
@@ -30,6 +31,8 @@
     }
   }
 ```
+
+
 
 ## REF
 -   [Git 通过submodule添加子项目/库](http://my.oschina.net/iatbforever/blog/228914)

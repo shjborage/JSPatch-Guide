@@ -13,12 +13,19 @@
 ### 开发复杂度
 整体会高一些，目前不建议使用 `JSPatch` 开发过多的逻辑，如果确实有需求，需要考虑多个 `js` 文件加载的情况；  
 
--   一些特性在 `JSPatch` 中可能还不支持；  
+-   一些特性在 `JSPatch` 中可能还不支持； 
 -   需要熟悉 `JSPatch` 环境以及复杂业务的开发流程；    
 -   字符串 / 数组 / 字典 操作的话，因为 `oc` 与 `js` 中都有相应的类型，使用上需要特别注意
 -   各种api都需要背下来进行开发，时间成本会变高
 -   对 `property` 的使用需要注意，不能使用 *dot语法*，需要使用 *get set方法* 来做
 -   对 `NSString` 类型的使用，也会有一些坑 详情如下：`var dataDesc = require('NSString').string().stringByAppendingString(self.dataObject().description()).stringByAppendingString(' Test');` 这样的写法是ok的，但如果这样写 `self.dataLabel().setText(self.dataObject().description() + "Test");` 就不行了。 所以你懂的，得分清你在写什么代码。
+-   动态加载系统库
+> 对于 iOS 内置的动态库，若原 APP 里没有加载，可以通过以下方式动态加载，以加载 SafariServices.framework 为例：
+> ```
+> var bundle = NSBundle.bundleWithPath("/System/Library/Frameworks/SafariServices.framework");
+> bundle.load();
+> ```
+-   枚举、宏这些都不能在js中直接使用，需要转换成相应的“值”
 
 ### 调试
 -   `js` 中的 `console.log();` 会被打印在 `Xcode` 控制台（做了中转，相当于`NSLog`）  
