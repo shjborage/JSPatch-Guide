@@ -44,7 +44,9 @@
 
 ### 使用注意事项
 #### 更新频率
->我之前看到很多人把使用js和下载js的代码都放在了didFinishLaunchingWithOptions：这个方法。我觉得有所不妥，因为如果这个app用户一直放在手机的后台（比如微信），并且也没出现内存警告的话，这个方法应该一直不会调用。我建议的是：使用js文件的代码放在didFinishLaunchingWithOptions： 而下载js文件的代码放在applicationDidBecomeActive: 因为这个方法在程序启动和后台回到前台时都会调用。并且我建议设置一个间隔时间，根据一些数据和权衡之后我们采用的是间隔时间设为1小时。 也就是说每次来到这个方法时，先要检测是距离上次发请求的时间间隔是否超过1小时，超过则发请求，否则跳过。  
+>我之前看到很多人把使用js和下载js的代码都放在了didFinishLaunchingWithOptions：这个方法。我觉得有所不妥，因为如果这个app用户一直放在手机的后台（比如微信），并且也没出现内存警告的话，这个方法应该一直不会调用。我建议的是：使用js文件的代码放在didFinishLaunchingWithOptions： 而下载js文件的代码放在applicationDidBecomeActive: 因为这个方法在程序启动和后台回到前台时都会调用。并且我建议设置一个间隔时间，根据一些数据和权衡之后我们采用的是间隔时间设为1小时。 也就是说每次来到这个方法时，先要检测是距离上次发请求的时间间隔是否超过1小时，超过则发请求，否则跳过。
+#### JSON与模型处理
+如果使用 `JSONModel` 或 `Mantle` 等model转json的库，model升级需要添加 *property*
 
 #### 参考流程
 ![](http://blog.saick.net/HostedResources/Images/2016/jspatch_1.png)
