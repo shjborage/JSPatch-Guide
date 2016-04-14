@@ -30,13 +30,12 @@
 ### 调试
 -   `js` 中的 `console.log();` 会被打印在 `Xcode` 控制台（做了中转，相当于`NSLog`）  
 -   **Debug**的话，需要使用 `Safari` 进行调试；[JS断点调试](https://github.com/bang590/JSPatch/wiki/JS-%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95)
+*调试注意打开这个，不然有些js文件可能无法被正常加载。*  
+![](http://blog.saick.net/HostedResources/Images/2016/JS-Debug.png)
   
 ### 资源文件使用
 -   测试使用 `require('UIImage').imageNamed('TestImage')` 是可以取到 `Assets.xcassets` 中的图片
 -   使用 `bundle` 取图片只测试了一下 `mainBunle` 其它应该也是一样的，也是可以取到图片 `require('UIImage').imageWithContentsOfFile(require('NSBundle').mainBundle().pathForResource_ofType("TestImage", 'png'))`
-
-*调试注意打开这个，不然有些js文件可能无法被正常加载。*  
-![](http://blog.saick.net/HostedResources/Images/2016/JS-Debug.png)
 
 ### 使用注意事项
 #### 更新频率
@@ -99,7 +98,7 @@ int main(void) {
 根据上面3个问题，所以还要在 `class_addProperty` 结合 `class_addMethod` 以及*关联对象*来完成一个新的property的添加。  
 完整的扩展后续会开源出来。
 
-除此之外，`JSONModel`还有一些细节使用，比如`@property (nonatomic, strong) NSArray<Optional, xxJSONModel> *recommend;` 需要注意添加property时的变量类型以及相应的protocal。 这种新增的话需要注意以下几点：
+除此之外，`JSONModel`还有一些细节使用，比如`@property (nonatomic, strong) NSArray<Optional, xxJSONModel> *recommend;` 需要注意添加property时的变量类型以及相应的protocal。 这种新增的话需要注意以下几点：  
 1. 新增的 `xxJSONModel` 要注意继承 `JSONModel`；
 2. 需要注意property里protocal的使用
 
