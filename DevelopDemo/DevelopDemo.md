@@ -115,6 +115,9 @@ int main(void) {
 ### 常用工具
 [JSPatchConvertor](https://github.com/bang590/JSPatchConvertor)
 
+### 使用 JSPatch 开发功能模块
+如果使用 `JSPatch` 开发全新的模块，多看看这个[官方的说明](https://github.com/bang590/JSPatch/wiki/%E4%BD%BF%E7%94%A8-JSPatch-%E5%BC%80%E5%8F%91%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97)
+
 ## REF
 [JSPatch 常见问题](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 [JSPatch 使用小记](http://www.cnblogs.com/dsxniubility/p/5080875.html)
