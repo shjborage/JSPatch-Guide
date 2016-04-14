@@ -24,7 +24,7 @@
 ### 具体调研细节
 -   [**JavaScriptCore** 调研](/JavaScriptCore/JSCGuide.md)
 -   [**JSPatch** Detail 调研](/JSPatchDetail/JSPatchDetail.md)
--   [**开发可能会遇到的问题**](/DevelopDemo/DevelopDemo.md)
+-   [**实际开发调研**](/DevelopDemo/DevelopDemo.md)
 
 ### 常见问题与解答 Q&A
 ##### 1. 重写的方法与原来的类型不对报错怎么办？
