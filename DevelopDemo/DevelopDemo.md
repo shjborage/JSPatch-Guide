@@ -91,16 +91,16 @@ int main(void) {
 }
 ```
 这个解法看似简单，但有几个需要注意的问题  
-1. 需要单独调用 `class_addMethod` 来添加 `getter` 与 `setter`；
-2. 例子 `nameGetter` `nameSetter`中很多参数都是写死的，对于内存管理、是否线程安全，都需要从 `self` `_cmd` 这俩参数中获取，因为你添加的所有property都是这个俩 `getter` `setter`
-3. property对应的内部实例变量，例子中也是**提前声明**好的。实际上根据官方文档以及[这个博客](http://southpeak.github.io/blog/2014/10/25/objective-c-runtime-yun-xing-shi-zhi-lei-yu-dui-xiang/)里的说明，`class_addIvar` 这个方法只能在 `objc_allocateClassPair` 函数与 `objc_registerClassPair` 之间调用。也就是说只能自己通过 runtime 添加的类才可以添加实例变量。
+1. 需要单独调用 `class_addMethod` 来添加 `getter` 与 `setter`；  
+2. 例子 `nameGetter` `nameSetter`中很多参数都是写死的，对于内存管理、是否线程安全，都需要从 `self` `_cmd` 这俩参数中获取，因为你添加的所有property都是这个俩 `getter` `setter`  
+3. property对应的内部实例变量，例子中也是**提前声明**好的。实际上根据官方文档以及[这个博客](http://southpeak.github.io/blog/2014/10/25/objective-c-runtime-yun-xing-shi-zhi-lei-yu-dui-xiang/)里的说明，`class_addIvar` 这个方法只能在 `objc_allocateClassPair` 函数与 `objc_registerClassPair` 之间调用。也就是说只能自己通过 runtime 添加的类才可以添加实例变量。  
 
 根据上面3个问题，所以还要在 `class_addProperty` 结合 `class_addMethod` 以及*关联对象*来完成一个新的property的添加。  
 完整的扩展后续会开源出来。
 
 除此之外，`JSONModel`还有一些细节使用，比如`@property (nonatomic, strong) NSArray<Optional, xxJSONModel> *recommend;` 需要注意添加property时的变量类型以及相应的protocal。 这种新增的话需要注意以下几点：  
-1. 新增的 `xxJSONModel` 要注意继承 `JSONModel`；
-2. 需要注意property里protocal的使用
+1. 新增的 `xxJSONModel` 要注意继承 `JSONModel`；  
+2. 需要注意property里protocal的使用  
 
 #### 代码冲突问题
 如果你有代码冲突的问题，当然这个我觉得比较扯，可以通过类似混淆的方式来修改 `symbol` 的方式来解决，参考这个 <http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/>
