@@ -32,3 +32,12 @@
 目前不需要怀疑JSPatch的原理以及本身的问题，先检查一下重写原有方法的参数类型与你要重写的是否一致，一定要仔细检查，不要想当然。
 ##### 2. 我新写了一个 `UITableViewCell`，为啥设置 `selectionStyle` 不管用？
 这个比较搞笑，确切的说是个小坑。 因为你在cell的js代码中写 `self.selectionStyle = 0` 相当于设置了没有点击态，但实际上这个并没有被调用到oc中。 正确的写法应该是: `self.setSelectionStyle(0);`
+##### 3. 使用压缩工具压缩后，语法错误怎么破？
+首先应该选择合适的工具，比如：[Google Closure Compiler](http://closure-compiler.appspot.com/home) 工具应该倒也不是重点，重点还是工具会把一些 `'xx'` 转换为 `"xx"`，这与 `JSPatc` 的方法调用替换 `__c("xx")` 是有冲突的，这就会带来问题了。
+```
+console.log('aModel:' + aModel + 'aModel.daoDianfu():' + aModel.daoDianfu());
+```
+被转换为
+```
+console.__c("log")("aModel:"+aModel+"aModel.__c("daoDianfu")():"+aModel.__c("daoDianfu")()),
+```
