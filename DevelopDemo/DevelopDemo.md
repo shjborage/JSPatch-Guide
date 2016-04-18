@@ -6,6 +6,8 @@
 -   资源文件的使用
 -   多模块（多文件支持）支持
 
+*要解决以上问题，还是先看官方文档* :[JSPatch 基础用法](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95)
+
 ### 代码量
 -   比native原生与我的话，要适应一下基础的环境。 目前支持的语法还是比较多的，有一些方式进行扩展。  
 -   目前可预估的是代码量会稍大一些，根据[JSPatch 常见问题](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)中的描述，很多类型转换会增加工作量和复杂度。
@@ -118,6 +120,6 @@ int main(void) {
 如果使用 `JSPatch` 开发全新的模块，多看看这个[官方的说明](https://github.com/bang590/JSPatch/wiki/%E4%BD%BF%E7%94%A8-JSPatch-%E5%BC%80%E5%8F%91%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97)
 
 ## REF
-[JSPatch 常见问题](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
-[JSPatch 使用小记](http://www.cnblogs.com/dsxniubility/p/5080875.html)
-[JSPatch 实现原理详解](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3)
+[JSPatch 常见问题](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)  
+[JSPatch 使用小记](http://www.cnblogs.com/dsxniubility/p/5080875.html)  
+[JSPatch 实现原理详解](https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3)  
