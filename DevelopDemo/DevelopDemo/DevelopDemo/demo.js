@@ -28,6 +28,18 @@ defineClass('DataViewController', {
   }
 });
 
+
+require('DataViewController').testBlock(block("NSString *, BOOL", function(ctn, succ) {
+  if (succ) {
+    console.log(ctn);  //output: I'm content
+  } else {
+    console.log(false);  //output: I'm content
+  }
+}))
+
+var block = DataViewController.genBlock();
+block({"asdf":2, 'v':'1.0'});
+
 //var alertView = require('UIAlertView').alloc().init();
 //alertView.setTitle('Alert');
 //alertView.setMessage('AlertView from js');

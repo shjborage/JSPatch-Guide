@@ -36,5 +36,21 @@
     return [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
 }
 
+#pragma mark - test block
+
++ (void)testBlock:(void(^)(NSString *content, BOOL success))callback {
+    callback(@"I'm the test content", YES);
+}
+
+typedef void (^JSBlock)(NSDictionary *dict);
++ (JSBlock)genBlock
+{
+    NSString *ctn = @"JSPatch";
+    JSBlock block = ^(NSDictionary *dict) {
+        NSLog(@"I'm %@, version: %@", ctn, dict[@"v"]);
+    };
+    return block;
+}
+
 
 @end
