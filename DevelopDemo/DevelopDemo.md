@@ -109,6 +109,11 @@ int main(void) {
 还有一个方案就是将只使用 `Core` 部分（修改下类名等），其它部分由自己来实现。
 
 #### 参考JS下发流程
+官方的做法见这两个说明：
+[JSPatch 部署安全策略](http://blog.cnbang.net/tech/2879/)  
+[JSPatch Loader 使用文档](https://github.com/bang590/JSPatch/wiki/JSPatch-Loader-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3)  
+
+其它小伙伴给出的流程：
 ![](http://blog.saick.net/HostedResources/Images/2016/jspatch_1.png)
 ![](http://blog.saick.net/HostedResources/Images/2016/jspatch_2.png)
 
@@ -116,8 +121,6 @@ int main(void) {
 压缩工具：<http://tool.css-js.com/>  
 支持各种压缩引擎，亲测 JSPatch 对 [Uglify](http://lisperator.net/uglifyjs/) 支持较好，或者说这个工具比较适配 JSPatch。 注意要关闭这个选项：`删除没使用的变量、函数`，原因是 OC 与 JS 各种互相调用，很有可能在 JS 中未使用。
 
-### 常用工具
-[JSPatchConvertor](https://github.com/bang590/JSPatchConvertor)
 
 ### 使用 JSPatch 开发功能模块
 如果使用 `JSPatch` 开发全新的模块，多看看这个[官方的说明](https://github.com/bang590/JSPatch/wiki/%E4%BD%BF%E7%94%A8-JSPatch-%E5%BC%80%E5%8F%91%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97)
