@@ -18,8 +18,8 @@
 4. 开发可能会遇到的问题  
 
 ### 常用工具
-<http://bang590.github.io/JSPatchConvertor/>
-
+OC代码转换为JS代码工具：<http://bang590.github.io/JSPatchConvertor/>  
+JS代码压缩工具：<http://tool.css-js.com/>  
 
 ### 具体调研细节
 -   [**JavaScriptCore** 调研](/JavaScriptCore/JSCGuide.md)
@@ -33,11 +33,25 @@
 ##### 2. 我新写了一个 `UITableViewCell`，为啥设置 `selectionStyle` 不管用？
 这个比较搞笑，确切的说是个小坑。 因为你在cell的js代码中写 `self.selectionStyle = 0` 相当于设置了没有点击态，但实际上这个并没有被调用到oc中。 正确的写法应该是: `self.setSelectionStyle(0);`
 ##### 3. 使用压缩工具压缩后，语法错误怎么破？
-首先应该选择合适的工具，比如：[Google Closure Compiler](http://closure-compiler.appspot.com/home) 工具应该倒也不是重点，重点还是工具会把一些 `'xx'` 转换为 `"xx"`，这与 `JSPatc` 的方法调用替换 `__c("xx")` 是有冲突的，这就会带来问题了。
+首先应该选择合适的工具，比如：[Google Closure Compiler](http://closure-compiler.appspot.com/home) 工具应该倒也不是重点，重点还是工具会把一些 `'xx'` 转换为 `"xx"`，这与 `JSPatch` 的方法调用替换 `__c("xx")` 是有冲突的，这就会带来问题了。
 ```
 console.log('aModel:' + aModel + 'aModel.daoDianfu():' + aModel.daoDianfu());
 ```
 被转换为
 ```
 console.__c("log")("aModel:"+aModel+"aModel.__c("daoDianfu")():"+aModel.__c("daoDianfu")()),
+```
+另外，这个 `self` `new` 被搞坏的情况也值得注意：
+```
+// ==ClosureCompiler==
+// @output_file_name default.js
+// @compilation_level SIMPLE_OPTIMIZATIONS
+// ==/ClosureCompiler==
+
+self.super();
+a.new();
+```
+被转换为
+```
+self["super"]();a["new"]();
 ```

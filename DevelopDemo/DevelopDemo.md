@@ -108,10 +108,13 @@ int main(void) {
 如果你有代码冲突的问题，当然这个我觉得比较扯，可以通过类似混淆的方式来修改 `symbol` 的方式来解决，参考这个 <http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/>
 还有一个方案就是将只使用 `Core` 部分（修改下类名等），其它部分由自己来实现。
 
-
 #### 参考JS下发流程
 ![](http://blog.saick.net/HostedResources/Images/2016/jspatch_1.png)
 ![](http://blog.saick.net/HostedResources/Images/2016/jspatch_2.png)
+
+#### JS文件压缩
+压缩工具：<http://tool.css-js.com/>  
+支持各种压缩引擎，亲测 JSPatch 对 [Uglify](http://lisperator.net/uglifyjs/) 支持较好，或者说这个工具比较适配 JSPatch。 注意要关闭这个选项：`删除没使用的变量、函数`，原因是 OC 与 JS 各种互相调用，很有可能在 JS 中未使用。
 
 ### 常用工具
 [JSPatchConvertor](https://github.com/bang590/JSPatchConvertor)
