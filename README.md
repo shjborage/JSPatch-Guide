@@ -55,3 +55,6 @@ a.new();
 ```
 self["super"]();a["new"]();
 ```
+##### 4. NSNumber使用
+不能使用 `NSNumber` 的 `alloc` 方法，但可以使用一些类方法。  
+与 `setProp_forKey` 一起使用时要注意，`NSNumber` 在js会面取到时，会变成普通数字，直接判断即可。_
